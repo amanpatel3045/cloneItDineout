@@ -1,0 +1,105 @@
+#nav{
+    /* border: 1px solid red; */
+    /* position: fixed; */
+    display: flex;
+    /* justify-content: space-around; */
+}
+#nav div{
+    margin: auto 30px;
+}
+#city select{
+    /* margin-left: -50px; */
+    margin-top: 10px;
+    height: 40px;
+    align-self: center;
+    padding-left: 30px;
+    border: 0.3px solid gray;
+}
+#content{
+    /* justify-content: space-around; */
+    align-self: center;
+    /* margin-left: -50px; */
+}
+#content>a{
+    text-decoration: none;
+    margin: 0 5px;
+    color: #111111;
+}
+#content>a:hover{
+    color: red;
+}
+#loc{
+    align-self: center;
+    /* margin-right: -65px; */
+    position: absolute;
+    left: 280px;
+    top: 34px;
+}
+#login{
+    height: 40px;
+    width: 140px;
+    border: 0px;
+    background-color: #FF645A;
+    border-radius: 10px;
+    font-size: large;
+    color: white;
+    align-self: center;
+}
+#login:hover{
+    background-color: red;
+    cursor: pointer;
+}
+#bigImage{
+    border: 1px solid;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-top: 20px;
+    /* background-image:url(https://im1.dineout.co.in/images/uploads/misc/2021/Mar/31/oldherobannerwebfinal_bau.jpg) */
+    background: url(https://im1.dineout.co.in/images/uploads/misc/2021/Mar/31/oldherobannerwebfinal_bau.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#imgCon{
+    /* border: 1px solid black; */
+    margin-top: 120px;
+    text-align: center;
+}
+#imgCon h1{
+    margin-bottom: 50px;
+}
+#search{
+    height: 70px;
+    width: 80%;
+    font-size: larger;
+    padding-left: 60px;
+    margin-top: -80px;
+    border-radius: 5px;
+    border: 0;
+}
+
+#searchBut{
+    margin-left: -170px;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+    background-color: #FF645A;
+    border: 0;
+    padding: 15px 40px;
+    border-radius: 6px;
+}
+#searchBut:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.searchLogo{
+    /* margin-right: -200px; */
+    height: 20px;
+    width: 20px;
+    margin-right: -100px;
+    margin-bottom: -100px;
+    position: absolute;
+    left: 160px;
+    top: 320px;
+}
