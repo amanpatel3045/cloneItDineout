@@ -197,12 +197,13 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
+
 .sec {
   display: flex;
   justify-content: center;
   background-color: #f3f3f3;
   width: 100%;
-  height: 240px;
+  height: 340px;
   padding: 40px 0;
 }
 #sec1data {
@@ -244,12 +245,13 @@ a > img {
   border-radius: 10px;
 }
 
-.sec2data > div > div:hover {
+.singledata:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .hotelI {
   width: 100%;
   height: 138px;
+  transition: all 0.3s ease-out;
 }
 .hotelD {
   width: 265px;
@@ -260,6 +262,7 @@ a > img {
 
 .hotelI:hover {
   transform: scale(1.1, 1.1);
+  transition: all 0.3s ease-in-out;
 }
 .sec2data > div:first-child {
   margin-top: 100px;
@@ -300,7 +303,7 @@ h2 {
   height: 100px;
 }
 .sec2 {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 .discFooter {
   display: flex;
@@ -312,6 +315,7 @@ h2 {
 }
 .percLogo {
   width: 20px;
+  margin-right: -30px;
 }
 .paraP {
   text-overflow: ellipsis;
@@ -319,10 +323,105 @@ h2 {
   color: gray;
   overflow: hidden;
   white-space: nowrap;
-  margin: 0;
+  margin: 0 10px 0 0;
 }
 .headH {
   font-size: 17px;
   margin: 0;
   margin-top: 8px;
 }
+#buttongrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: -120px;
+}
+#container::-webkit-scrollbar {
+  display: none;
+}
+#container2::-webkit-scrollbar {
+  display: none;
+}
+.sec2data > div {
+  position: static;
+}
+.buttonS {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  height: 58px;
+  width: 267px;
+  text-decoration: none;
+  background-color: #f3f3f3ec;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 #8d8989;
+  cursor: pointer;
+}
+.buttonS > div > img {
+  width: 35px;
+  display: block;
+  margin: 0 10px 10px 30px;
+}
+.buttonS > div > p {
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.733);
+}
+.buttonS {
+  background: linear-gradient(
+    to right,
+    rgba(196, 194, 194, 0.342) 50%,
+    #f3f3f3a9 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.buttonS:hover {
+  background-position: left bottom;
+}
+.dirM {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  margin-top: -190px;
+}
+.dirButton {
+  display: flex;
+  width: 1110px;
+  justify-content: space-between;
+}
+.titleBox {
+  margin-bottom: 100px;
+  margin-top: -10px;
+}
+#dirfix {
+  margin-top: 0;
+}
+#buttonbackground {
+  margin-top: 40px;
+}
+.directionR,
+.directionL {
+  border-radius: 44px;
+  padding: 15px 20px;
+  background-color: rgb(209, 194, 194);
+  border: none;
+}
+.directionR {
+  right: 8px !important;
+  background: #f2f6fd
+    url(https://im1.dineout.co.in/images/uploads/misc/2020/Jan/9/carousel-right-arrow.png)
+    no-repeat 10px 50% !important;
+  background-size: 50% !important;
+  
+}
+.directionL {
+  left: -3px !important;
+  background: #f2f6fd
+    url(https://im1.dineout.co.in/images/uploads/misc/2020/Jan/9/carousel-left-arrow.png)
+    no-repeat 10px 50% !important;
+  background-size: 50% !important;
+  
+}
+

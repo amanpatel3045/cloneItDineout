@@ -66,7 +66,7 @@
         <div ><img
           class="searchLogo"
           style="font-size: 20px"
-          src="magnifying-glass-solid.svg"
+          src="serchlogo.png"
           alt=""
         /></div>
         <input
@@ -76,25 +76,45 @@
         />
         <button type="submit" id="searchBut">Search</button></div>
     </div>
-    <section class="sec">
+    <section class="sec" style="height: 240px;">
       <div id="sec1data">
         <div><h2>Best offers</h2></div>
-        <div id="OfferData">
-        </div>
+        <div id="OfferData"></div> 
       </div>
     </section>
-    <section class="sec" style="background-color: white">
-      <div class="sec2data">
-        <div><h2>Restaurants Near You</h2></div>
-        <a id="restroData"></a>
+    <section class="sec "style="background-color: white">  
+      <div  >
+        <div class="titleBox"><h2>Restaurants Near You</h2></div>
+       <div class="sec2data" id="container" onmouseenter="viewArrow()"> <a id="restroData"> </a></div>
       </div>
     </section>
+    <div class="dirM">
+      <div class="dirButton">
+      <button class="directionL" type="button" onclick="slide('left')"></button>
+      <button class="directionR" type="button" onclick="slide('right')"></button>
+    </div>
+    </div>
+  
     <section class="sec sec2" style="background-color: white">
-      <div class="sec2data section2">
-        <div><h2>Featured Restaurants</h2></div>
-        <a id="restroData2">
+      
+      <div>
+        <div class="titleBox" id="dirfix"><h2>Featured Restaurants</h2></div>
+        <div class="sec2data " id="container2" onmouseenter="viewArrow()"><a id="restroData2"></a></div>
+    </section>
+     <div class="dirM" >
+      <div class="dirButton">
+      <button class="directionL" type="button" onclick="slide2('left')"></button>
+      <button class="directionR" type="button" onclick="slide2('right')"></button>
+    </div>
+     </div>
+    <section class=" sec sec2" id="buttonbackground" style="background-color: white;">
+     <div id="buttonarea"> 
+      <div id="buttongrid">
+      </div>
+    </div>
     </section>
   </body>
+  
   <script
     src="https://kit.fontawesome.com/584aebd994.js"
     crossorigin="anonymous"
