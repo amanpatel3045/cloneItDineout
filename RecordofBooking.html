@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/584aebd994.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      /* header nav bar start */
+      body {
+        margin: 0;
+      }
+      #header2 {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        justify-content: center;
+        margin: 20px;
+        background-color: white;
+        z-index: 1;
+        margin-top: 0;
+        padding-top: 20px;
+      }
+      #navend {
+        position: fixed;
+        width: 100%;
+        padding-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.144) 0px 25px 20px -20px;
+        background-color: white;
+      }
+      #serachbar2 {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      #header2::after {
+        border-top: 1px solid #333;
+      }
+      #logo {
+        margin-left: 80px;
+        content: "";
+      }
+      .searchLogo2 {
+        width: 20px;
+        display: block;
+        margin: 0px -10px 0 10px;
+      }
+      #city2 select {
+        margin-top: 5px;
+        margin-left: 30px;
+        height: 30px;
+        align-self: center;
+        padding-left: 30px;
+        padding-right: 10px;
+        border: 0.1px solid gray;
+        border-radius: 5px;
+        color: #333;
+      }
+      #search2 {
+        margin-left: 20px;
+        height: 25px;
+        width: 450px;
+        padding-left: 40px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+      }
+      #searchBut2 {
+        height: 32px;
+        margin-left: -2px;
+        margin-right: -1px;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        background-color: #ff645a;
+        border: 0;
+        border-radius: 5px;
+        padding: 1px 20px;
+      }
+      #searchBut2:hover {
+        cursor: pointer;
+        background-color: red;
+      }
+      #log {
+        margin-left: 20px;
+        height: 32px;
+        font-size: 90%;
+        font-weight: bold;
+        color: white;
+        background-color: #ff645a;
+        border: 0;
+        border-radius: 5px;
+        padding: 6px 40px;
+      }
+      #log:hover {
+        cursor: pointer;
+      }
+      #loc1 {
+        position: absolute;
+        left: 265px;
+        top: 35px;
+      }
+      #searchlogo {
+        position: absolute;
+        left: 510px;
+        top: 35px;
+      }
+      #lowerhead {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+      }
+      #lowerhead a {
+        text-decoration: none;
+        margin: 20px;
+        color: #333;
+      }
+      #lowerhead a:hover {
+        color: red;
+      }
+      #mainHeader {
+        box-shadow: rgba(0, 0, 0, 0.144) 0px 25px 20px -20px;
+        padding-bottom: 10px;
+        background-color: white;
+      }
+      #location2 {
+        width: 0;
+        height: 0;
+        align-self: flex-start;
+        z-index: 1;
+      }
+      #city2 > select {
+        width: 150px;
+        margin-top: -10px;
+      }
+      #loc2 {
+        width: 20px;
+        padding-top: 6px;
+        padding-left: 35px;
+      }
+
+      #city2 {
+        display: flex;
+        margin: 0;
+        padding: 0px 10px;
+      }
+      /* header Nav bar end */
+
+      #loginD {
+        margin: 2px 0 0 55px;
+      }
+      #loginD select {
+        height: 30px;
+        width: 120px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+      }
+      #loginD i {
+        margin: 0 10px 0 -20px;
+      }
+      /* record section */
+      body {
+        background-color: rgba(189, 178, 178, 0.37);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      #recordsec {
+        display: flex;
+        margin-top: 120px;
+        justify-content: center;
+      }
+      #recordsec > div > div {
+        background-color: white;
+        padding: 1px 10px;
+        width: 700px;
+      }
+      .gDetails {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: gray;
+      }
+      .gDetails h3 {
+        margin: 0;
+        font-weight: 400;
+      }
+      .gDetails > div {
+        display: flex;
+        background-color: white;
+        justify-content: space-between;
+        margin: 10px 5px;
+      }
+      #mainRecord {
+        text-align: center;
+      }
+      #mainRecord > h1 {
+        font-size: 40px;
+        margin: 0;
+      }
+      /* record section */
+    </style>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <header id="mainHeader">
+      <div id="header2">
+        <div id="logo">
+          <a href=""
+            ><img
+              src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/25/website-logo.png"
+              alt="Dineout"
+              title="Dineout"
+              width="120"
+              height="40"
+          /></a>
+        </div>
+        <div id="city2">
+          <div id="location2">
+            <img id="loc2" src="location_logo.png" alt="" />
+          </div>
+          <select name="" aria-placeholder="Please type a location">
+            <option id="Delhi">Delhi</option>
+            <option value="Rajauri Garden">Mumbai</option>
+            <option value="Sector 29, Gurgaon">Pune</option>
+            <option value="DLF Cyber City, Gurgaon">Benglore</option>
+          </select>
+        </div>
+        <div id="serachbar2">
+          <div>
+            <img
+              class="searchLogo2"
+              style="font-size: 20px"
+              src="serchlogo.png"
+              alt=""
+            />
+          </div>
+          <input
+            type="text"
+            id="search2"
+            placeholder="Search for Restaurants, Cuisines, Location..."
+          />
+          <button type="submit" id="searchBut2">Search</button>
+        </div>
+        <div id="loginD">
+          <i class="fa-solid fa-user"></i>
+          <select name="" id="changeP" onchange="Changepage()">
+            <option value="afterLoginpage">My Account</option>
+            <option value="Myprofile">My Profile</option>
+            <option value="index">Logout</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <div id="navend">
+      <hr style="color: gray; margin-top: 60px" />
+      <div id="lowerhead">
+        <div><a href="afterLoginPage.html">Home</a></div>
+        <div><a href="">Book a Table</a></div>
+        <div><a href="">Dineout Pay</a></div>
+        <div><a href="">Super Saver</a></div>
+      </div>
+    </div>
+    <!-- navbar end -->
+    <!-- booking info -->
+    <section id="recordsec">
+      <div>
+        <div id="mainRecord">
+          <h1 id="NameOfRestorant">local</h1>
+          <p id="AdresssOfRestorant">Address</p>
+        </div>
+        <div class="gDetails">
+          <h2>Guest Details</h2>
+          <div>
+            <h3>Guest Name:</h3>
+            <h3 id="NameofGuest">Guest Name</h3>
+          </div>
+          <div>
+            <h3>Phone no.:</h3>
+            <h3 id="NoofGuest">Guest Number</h3>
+          </div>
+          <div>
+            <h3>Guest Name:</h3>
+            <h3 id="EmailofGuest">Email</h3>
+          </div>
+        </div>
+        <div class="gDetails">
+          <h2>Booking Summary</h2>
+          <div>
+            <h3>Table Status - Confirmed</h3>
+            <h3 id="stutusofbooking">
+              Your reservation is confirmed! Happy Dining
+            </h3>
+          </div>
+          <div>
+            <h3>Date & Time</h3>
+            <h3 id="Dateandtime">Guest Number</h3>
+          </div>
+          <div>
+            <h3>Guests</h3>
+            <h3 id="CGuest">0</h3>
+          </div>
+          <div>
+            <h3>Id</h3>
+            <h3 id="IdBooking">Booing id</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- booking info ind -->
+  </body>
+  <script>
+    function Changepage() {
+      var sitname = "./" + document.getElementById("changeP").value + ".html";
+      window.open(`${sitname}`, "_self");
+    }
+    var checkemail = JSON.parse(localStorage.getItem("emailnew"));
+    var userdata = JSON.parse(localStorage.getItem("users")) || [];
+    for (var i = 0; i < userdata.length; i++) {
+      if (checkemail == userdata[i].email) {
+        document.getElementById("NameofGuest").innerText = userdata[i].name;
+        document.getElementById("NoofGuest").innerText = userdata[i].mobileNo;
+        document.getElementById("EmailofGuest").innerText = userdata[i].email;
+      }
+    }
+  </script>
+</html>

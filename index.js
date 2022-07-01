@@ -202,6 +202,36 @@ var buttonData = [
     name: "Happiest Hours",
   },
 ];
+var restoData3 = [
+  {
+    image_url:
+      "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/6/s/m/p69146-163921872761b47e27e5f71.jpg?tr=tr:n-large",
+    name: "High 5-Everyday",
+    place: "Connaught Place, Central Delhi",
+    rating: "3.9",
+  },
+  {
+    image_url:
+      "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/7/c/z/p77626-15833232035e5f98437554f.jpg?tr=tr:n-large",
+    name: "Connaught Clubhouse",
+    place: "Connaught Place, Central Delhi",
+    rating: "4.2",
+  },
+  {
+    image_url:
+      "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/6/r/f/p65288-162013551960914e5feacd6.jpg?tr=tr:n-large",
+    name: "Dhaba Estd",
+    place: "Connaught Place, Central Delhi",
+    rating: "4.1",
+  },
+  {
+    image_url:
+      "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/2/s/q/p21753-162678610360f6c93732f2f.jpg?tr=tr:n-large",
+    name: "Oh My God",
+    place: "Connaught Place, Central Delhi",
+    rating: "4.0",
+  },
+];
 displayData(restoData);
 function displayData(restoData) {
   restoData.map(function (el) {
@@ -303,3 +333,34 @@ function slide2(direction) {
     }
   }, 50);
 }
+displayData5(restoData3);
+function displayData5(restoData3) {
+  restoData3.map(function (el) {
+    var input1 = `<div class="hotelD">
+              <img class="hotelI" src="${el.image_url}" alt=""/>
+            </div>
+            <div id="textdata">
+              <div>
+                <div>
+                  <h4 class="headH">${el.name}</h4>
+                  <p class="paraP">${el.place}</p>
+                </div>
+                <div class="rating">${el.rating}</div>
+              </div>
+              <div class = "discFooter">
+                <img class="percLogo"src="percentae_logo.png"/>  
+                Flat 10% Off the Total Bill
+              </div>
+            </div>`;
+    var div = document.createElement("div");
+    div.innerHTML = input1;
+    div.setAttribute("class", "singledata");
+    document.getElementById("footerRestorantdata").append(div);
+  });
+}
+// my account
+function Changepage() {
+  var sitname = "./" + document.getElementById("changeP").value + ".html";
+  window.open(`${sitname}`, "_self");
+}
+// my account end

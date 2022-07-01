@@ -414,7 +414,6 @@ h2 {
     url(https://im1.dineout.co.in/images/uploads/misc/2020/Jan/9/carousel-right-arrow.png)
     no-repeat 10px 50% !important;
   background-size: 50% !important;
-  
 }
 .directionL {
   left: -3px !important;
@@ -422,6 +421,34 @@ h2 {
     url(https://im1.dineout.co.in/images/uploads/misc/2020/Jan/9/carousel-left-arrow.png)
     no-repeat 10px 50% !important;
   background-size: 50% !important;
-  
 }
 
+.seeplansimg {
+  display: flex;
+  justify-content: center;
+  margin-top: -90px;
+}
+.offerimg > img {
+  width: 520px;
+  height: 470px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+#footerRestorantdata {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#loginD {
+  margin: 2px 0 0 55px;
+}
+#loginD select {
+  height: 30px;
+  width: 120px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+#loginD i {
+  margin: 0 2px 0 20px;
+}
