@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <script>
+        var text = document.getElementById("test").value;
+        var regx = /^[7-9][0-9]{9}$/;
+        if (regx.test(text)) {
+          document.getElementById("lbltext").innerHTML = "Valid";
+          document.getElementById("lbltext").style.visibility = "visible";
+          document.getElementById("lbltext").style.color = "green";
+        } else {
+          document.getElementById("lbltext").innerHTML = "InValid";
+          document.getElementById("lbltext").style.visibility = "visible";
+          document.getElementById("lbltext").style.color = "red";
+        }
+
+    </script>
+  </head>
+  <body>
+    <form action="">
+        <h1>Sign up</h1>
+    <input class="test" type="text" placeholder="Enter your full name" required="required" />
+    <br>
+    <input class="test" type="number" placeholder="Enter your Phone number" required="required" />
+
+    <label id="lbltext" style="color: #ff645a; visibility: hidden">InValid</label>
+
+
+    <p>Your mobile number will be verified in next step</p>
+ 
+    <input
+      class="test"
+      type="text"
+      placeholder="Enter you Email Id(Optional)"
+    />
+   <br/>
+   <br>
+    <a
+      href="file:///C:/Users/Admin/Desktop/dineout%20login%20page/mobileNumberVerify.htm  
+      "
+   
+    >
+    <button>Sign Up</button>
+     </a>
+  </body>
+</html>
+
+<style>
+  h1 {
+    color: #ff645a;
+    
+  }
+  button{
+    background-color:#ff645a;
+    color: white;
+    width: 304px;
+   height: 40px;
+    
+
+  }
+
+  .test {
+    height: 30px;
+    width: 302px;
+    border: none;
+    border-bottom: 1px solid #000000;
+  }
+  button:hover{
+    color: blue;
+    background-color: bisque;
+  }
+
+</style>

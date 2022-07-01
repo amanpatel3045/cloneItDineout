@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification</title>
+
+    <script type="text/javascript">
+      function otp() {
+        var sub = document.getElementById("test");
+
+        if (sub.value != "1234" || sub.value == "") {
+          alert("Your OTP is 1234");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return otp();" action="https://www.dineout.co.in/">
+      <h2>Verify mobile number</h2>
+
+      <br />
+      <br />
+      <input id="test" type="number" />
+      <br />
+
+      <p>Your Verification Code has been sent to your mobile, please</p>
+      <p>enter it here to update.</p>
+      <h3>Resend OTP</h3>
+      <a href="https://www.dineout.co.in/">
+        <button type="submit">Next</button>
+      </a>
+    </form>
+  </body>
+  <style>
+    #test {
+      height: 30px;
+      width: 430px;
+      border: none;
+      border-bottom: 1px solid #000000;
+    }
+
+    h2 {
+      color: #ff645a;
+    }
+    h3 {
+      margin-left: 25%;
+    }
+    p {
+      color: rgb(0, 162, 255);
+    }
+
+    Button {
+      width: 440px;
+      height: 30px;
+      font-size: large;
+      color: white;
+      background-color: #ff645a;
+    }
+    button:hover {
+      color: green;
+      border-color: blue;
+    }
+    h3:hover {
+      color: #ff645a;
+    }
+  </style>
+</html>

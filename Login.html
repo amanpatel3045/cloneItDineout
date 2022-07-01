@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In/Sign Up</title>
+
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+    <style>
+      #pa {
+        height: 400px;
+        width: 400px;
+      }
+      h1 {
+        color: #ff645a;
+      }
+      #Mobile {
+        width: 400px;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid #000000;
+      }
+      p {
+        color: white;
+        background-color: #ff645a;
+        text-align: center;
+      }
+      #fb {
+        color: white;
+        background-color: blue;
+        font-size: large;
+      }
+      #gm {
+        color: black;
+        background-color: white;
+        font-size: large;
+      }
+      /* Button {
+        width: 310px;
+        height: 30px;
+        font-size: large;
+        color: white;
+        background-color: rgba(255, 0, 0, 0.795);
+      } */
+      h5 {
+        text-align: center;
+        font-size: large;
+        display: flex;
+      }
+      #fb {
+        width: 100%;
+      }
+      #gm {
+        width: 100%;
+        height: 50%;
+      }
+      button {
+        width: 190px;
+        height: 40px;
+      }
+      #cont {
+        background-color: #ff645a;
+        width: 400px;
+        height: 40px;
+        color: white;
+      }
+      button:hover {
+        color: blue;
+        background-color: green;
+        box-shadow: inset;
+      }
+      h5:hover {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+
+    <form onsubmit="return otp()" action="https://www.dineout.co.in/">
+      <div id="pa">
+        <h1>Log In / Sign Up</h1>
+        <input
+          id="Mobile"
+          type="text"
+          required
+          placeholder="Enter Mobile number or Email"
+        />
+        <br />
+        <br />
+        <a href="C:\Users\Admin\Desktop\dineout login page\SignUp.html">
+          <button type="submit" id="cont">Continue</button>
+        </a>
+
+        <h5>Or login via</h5>
+
+        <div>
+          <button>
+            <a>
+              <img
+                id="fb"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAZpvj1y0dZU-24N03A6eT-9aqhAZo5Dl-Mg&usqp=CAU"
+                alt="Facebook"
+              />
+            </a>
+          </button>
+
+          <button>
+            <a>
+              <img
+                id="gm"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRqkDB9vXtRDfNAvKwJyHHzo6wv3iYN45yXg&usqp=CAU
+            "
+                alt="Gmail"
+              />
+            </a>
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
