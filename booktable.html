@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./booktable.css">
+</head>
+<body>
+    <div id="main-container">
+        <div id="filter-container">
+            <!-- implement checkbod -->
+            <div class="left-filter">
+                <h4 class="head">Quick Filters</h4>
+                <div class=content><input id="search" type="text" placeholder="Search">
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Dineout Pay
+                        </span>
+                    </label>
+
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Pure Veg </span>
+                    </label>
+
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> 5 STar</span>
+                    </label>
+
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Buffet </span>
+                    </label>
+
+                    <p>Show More ...</p>
+                </div>
+            </div>
+
+            <div class="left-filter">
+                <h4 class="head">Cuisines</h4>
+                <div class="content"><input type="text" id="search" placeholder="Search For Cuisine">
+                    <div><p >North Indian</p></div>
+                    <div><p>Chinese</p></div>
+                    <div><p>South Indian</p></div>
+                    <div><p>Fast Food</p></div>
+                    <p >Show More ...</p>
+                </div>
+            </div>
+
+            <div class="left-filter">
+                <h4 class="head">Tags</h4>
+                <div class="content"><input id="search" type="text" placeholder="Search">
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Causual Dining
+                        </span>
+                    </label>
+
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark">Pure Veg </span>
+
+                    </label>
+
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Best Pure Veg</span>
+
+                    </label>
+
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Best of Food 2021 </span>
+
+                    </label>
+
+                    <p>Show More ...</p>
+                </div>
+
+            </div>
+
+            <div class="left-filter">
+                <h4 class="head">Features</h4>
+                <div class="content"><input type="text" id="search" placeholder="Search">
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark">Card Accepted</span>
+
+                    </label>
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Air Conditioned</span>
+
+                    </label>
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Home Delivery</span>
+
+                    </label>
+                    <label class="check-box">
+                        <input class="check" type="checkbox" >
+                        <span class="checkmark"> Wallet Accepted</span>
+
+                    </label>
+                    <p>Show More ...</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="productContainer">
+            <p style="color:#8f8f8f">Dineout > Delhi > Delhi Resaurants</p>
+            <div id="nav">
+                <div>
+                    <h2>Best Restaurants Near Me in Delhi</h2>
+                </div>
+                <div class="right-filter">
+                    <label for="SortBy">Sort By</label>
+                    <select name="SortBy" id="sortby">
+                        <option value="Popularity">Popularity</option>
+                        <option value="Rating">Rating</option>
+                        <option value="Price: Low to High">Price: Low to High</option>
+                        <option value="Price: High to Low">Price: High to Low</option>
+                    </select>
+
+                </div>
+            </div>
+            <div id="product-details"></div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+<script src="./bookatable.js"></script>
