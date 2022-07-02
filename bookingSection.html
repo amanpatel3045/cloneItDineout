@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bookingsection.css" />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <div id="header2">
+        <div id="logo">
+          <a href=""
+            ><img
+              src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/25/website-logo.png"
+              alt="Dineout"
+              title="Dineout"
+              width="120"
+              height="40"
+          /></a>
+        </div>
+        <div id="city2">
+          <div id="location2">
+            <img id="loc2" src="location_logo.png" alt="" />
+          </div>
+          <select name="" aria-placeholder="Please type a location">
+            <option id="Delhi">Delhi</option>
+            <option value="Rajauri Garden">Mumbai</option>
+            <option value="Sector 29, Gurgaon">Pune</option>
+            <option value="DLF Cyber City, Gurgaon">Benglore</option>
+          </select>
+        </div>
+        <div id="serachbar2">
+          <div>
+            <img
+              class="searchLogo2"
+              style="font-size: 20px"
+              src="serchlogo.png"
+              alt=""
+            />
+          </div>
+          <input
+            type="text"
+            id="search2"
+            placeholder="Search for Restaurants, Cuisines, Location..."
+          />
+          <button type="submit" id="searchBut2">Search</button>
+        </div>
+        <div id="loginD">
+          <i class="fa-solid fa-user"></i>
+          <select name="" id="changeP" onchange="Changepage()">
+            <option value="afterLoginpage">My Account</option>
+            <option value="Myprofile">My Profile</option>
+            <option value="index">Logout</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <div id="navend">
+      <hr style="color: gray; margin-top: 60px" />
+      <div id="lowerhead">
+        <div><a href="afterLoginPage.html">Home</a></div>
+        <div><a href="bookingSection.html">Book a Table</a></div>
+        <div><a href="">Dineout Pay</a></div>
+        <div><a href="">Super Saver</a></div>
+      </div>
+    </div>
+    <!-- navbar end -->
+
+    <div id="main-container" style="margin-top: 100px">
+      <div id="filter-container">
+        <!-- implement checkbod -->
+        <div class="left-filter">
+          <h4 class="head">Quick Filters</h4>
+          <div class="content">
+            <input id="search" type="text" placeholder="Search" />
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Dineout Pay </span>
+            </label>
+
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Pure Veg </span>
+            </label>
+
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> 5 STar</span>
+            </label>
+
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Buffet </span>
+            </label>
+
+            <p>Show More ...</p>
+          </div>
+        </div>
+
+        <div class="left-filter">
+          <h4 class="head">Cuisines</h4>
+          <div class="content">
+            <input type="text" id="search" placeholder="Search For Cuisine" />
+            <div><p>North Indian</p></div>
+            <div><p>Chinese</p></div>
+            <div><p>South Indian</p></div>
+            <div><p>Fast Food</p></div>
+            <p>Show More ...</p>
+          </div>
+        </div>
+
+        <div class="left-filter">
+          <h4 class="head">Tags</h4>
+          <div class="content">
+            <input id="search" type="text" placeholder="Search" />
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Causual Dining </span>
+            </label>
+
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark">Pure Veg </span>
+            </label>
+
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Best Pure Veg</span>
+            </label>
+
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Best of Food 2021 </span>
+            </label>
+
+            <p>Show More ...</p>
+          </div>
+        </div>
+
+        <div class="left-filter">
+          <h4 class="head">Features</h4>
+          <div class="content">
+            <input type="text" id="search" placeholder="Search" />
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark">Card Accepted</span>
+            </label>
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Air Conditioned</span>
+            </label>
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Home Delivery</span>
+            </label>
+            <label class="check-box">
+              <input class="check" type="checkbox" />
+              <span class="checkmark"> Wallet Accepted</span>
+            </label>
+            <p>Show More ...</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="productContainer">
+        <p style="color: #8f8f8f">Dineout > Delhi > Delhi Resaurants</p>
+        <div id="nav">
+          <div>
+            <h2>Best Restaurants Near Me in Delhi</h2>
+          </div>
+          <div class="right-filter">
+            <label for="SortBy">Sort By</label>
+            <select name="SortBy" id="sortby">
+              <option value="Pop">Popularity</option>
+              <option value="Rat">Rating</option>
+              <option value="Priceasc">Price: Low to High</option>
+              <option value="Pricedsc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+        <div id="product-details"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let hotels = [
+    {
+      name: "Marriott",
+      place: "Pune",
+      price: 2000,
+      type: "5 star",
+      payment: "Dineout Pay",
+      rating: 4.5,
+      Discount: 12,
+      img: "https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952_960_720.jpg",
+    },
+
+    {
+      name: "Ritz-Carlton Hote",
+      place: "Pune",
+      price: 3000,
+      type: "Chinese",
+      payment: "Credit Card",
+      rating: 4.3,
+      Discount: 30,
+      img: "https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_960_720.jpg",
+    },
+    {
+      name: "Green Pearl",
+      place: "Pune",
+      price: 4400,
+      type: "North Indian",
+      payment: "UPI",
+      rating: 4.1,
+      Discount: 50,
+      img: "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/8/f/w/p8316-1467365573577638c54e0e4.jpg?tr=tr:n-medium",
+    },
+    {
+      name: "Hyatt",
+      place: "Pune",
+      price: 900,
+      type: "Italian",
+      payment: "Paypal",
+      rating: 4.0,
+      Discount: 10,
+      img: "https://cdn.pixabay.com/photo/2017/08/03/21/48/drinks-2578446_960_720.jpg",
+    },
+
+    {
+      name: "Aman Resorts",
+      place: "Pune",
+      price: 4000,
+      type: "Seafood",
+      payment: "Cash",
+      rating: 3.1,
+      Discount: 20,
+      img: "https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590_960_720.jpg",
+    },
+    {
+      name: "Sizzling Inn",
+      place: "Pune",
+      price: 4200,
+      type: "Pure veg",
+      payment: "Debitcard",
+      rating: 2.1,
+      Discount: 13,
+      img: "https://cdn.pixabay.com/photo/2016/11/22/06/32/girl-1848478_960_720.jpg",
+    },
+    {
+      name: "Palace Hotel",
+      place: "Pune",
+      price: 1400,
+      type: "French",
+      payment: "Crypto",
+      rating: 4.7,
+      Discount: 14,
+      img: "https://cdn.pixabay.com/photo/2016/03/27/21/34/restaurant-1284351_960_720.jpg",
+    },
+    {
+      name: "Red Hotel",
+      place: "Pune",
+      price: 1600,
+      type: "Mexican",
+      payment: "Cheque",
+      rating: 3.5,
+      Discount: 9,
+      img: "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg",
+    },
+
+    {
+      name: "Ged Hotel",
+      place: "Pune",
+      price: 1900,
+      type: "Arabian",
+      payment: "Paytm",
+      rating: 3.5,
+      Discount: 9,
+      img: "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg",
+    },
+    //
+    {
+      name: "Marriott",
+      place: "Bangalore",
+      price: 2000,
+      type: "5 star",
+      payment: "Dineout Pay",
+      rating: 4.5,
+      Discount: 12,
+      img: "https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952_960_720.jpg",
+    },
+
+    {
+      name: "Ritz-Carlton Hote",
+      place: "Bangalore",
+      price: 3000,
+      type: "Chinese",
+      payment: "Credit Card",
+      rating: 4.3,
+      Discount: 30,
+      img: "https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_960_720.jpg",
+    },
+    {
+      name: "Ocean Pearl",
+      place: "Bangalore",
+      price: 4400,
+      type: "North Indian",
+      payment: "UPI",
+      rating: 4.1,
+      Discount: 50,
+      img: "https://cdn.pixabay.com/photo/2021/07/19/16/04/pizza-6478478_960_720.jpg",
+    },
+    {
+      name: "Hyatt",
+      place: "Bangalore",
+      price: 900,
+      type: "Italian",
+      payment: "Paypal",
+      rating: 4.0,
+      Discount: 10,
+      img: "https://cdn.pixabay.com/photo/2017/08/03/21/48/drinks-2578446_960_720.jpg",
+    },
+
+    {
+      name: "Aman Resorts",
+      place: "Bangalore",
+      price: 4000,
+      type: "Seafood",
+      payment: "Cash",
+      rating: 3.1,
+      Discount: 20,
+      img: "https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590_960_720.jpg",
+    },
+    {
+      name: "Burning Inn",
+      place: "Bangalore",
+      price: 4200,
+      type: "Pure veg",
+      payment: "Debitcard",
+      rating: 2.1,
+      Discount: 13,
+      img: "https://cdn.pixabay.com/photo/2016/11/22/06/32/girl-1848478_960_720.jpg",
+    },
+    {
+      name: "Palace Hotel",
+      place: "Bangalore",
+      price: 1400,
+      type: "French",
+      payment: "Crypto",
+      rating: 4.7,
+      Discount: 14,
+      img: "https://cdn.pixabay.com/photo/2016/03/27/21/34/restaurant-1284351_960_720.jpg",
+    },
+    {
+      name: "Poed Hotel",
+      place: "Bangalore",
+      price: 1600,
+      type: "Mexican",
+      payment: "Cheque",
+      rating: 3.5,
+      Discount: 9,
+      img: "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg",
+    },
+
+    {
+      name: "Xed Hotel",
+      place: "Bangalore",
+      price: 1900,
+      type: "Arabian",
+      payment: "Paytm",
+      rating: 3.5,
+      Discount: 9,
+      img: "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg",
+    },
+
+    // 3
+    {
+      name: "Hyderabad",
+      place: "Mumbai",
+      price: 2000,
+      type: "5 star",
+      payment: "Dineout Pay",
+      rating: 4.5,
+      Discount: 12,
+      img: "https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952_960_720.jpg",
+    },
+
+    {
+      name: "Ritz-Carlton Hote",
+      place: "Hyderabad",
+      price: 3000,
+      type: "Chinese",
+      payment: "Credit Card",
+      rating: 4.3,
+      Discount: 30,
+      img: "https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_960_720.jpg",
+    },
+    {
+      name: "Ocean Pearl",
+      place: "Hyderabad",
+      price: 4400,
+      type: "North Indian",
+      payment: "UPI",
+      rating: 4.1,
+      Discount: 50,
+      img: "https://cdn.pixabay.com/photo/2021/07/19/16/04/pizza-6478478_960_720.jpg",
+    },
+    {
+      name: "Hyatt",
+      place: "Hyderabad",
+      price: 900,
+      type: "Italian",
+      payment: "Paypal",
+      rating: 4.0,
+      Discount: 10,
+      img: "https://cdn.pixabay.com/photo/2017/08/03/21/48/drinks-2578446_960_720.jpg",
+    },
+
+    {
+      name: "Aman Resorts",
+      place: "Hyderabad",
+      price: 4000,
+      type: "Seafood",
+      payment: "Cash",
+      rating: 3.1,
+      Discount: 20,
+      img: "https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590_960_720.jpg",
+    },
+    {
+      name: "Sizzling Inn",
+      place: "Hyderabad",
+      price: 4200,
+      type: "Pure veg",
+      payment: "Debitcard",
+      rating: 2.1,
+      Discount: 13,
+      img: "https://cdn.pixabay.com/photo/2016/11/22/06/32/girl-1848478_960_720.jpg",
+    },
+    {
+      name: "Palace Hotel",
+      place: "Hyderabad",
+      price: 1400,
+      type: "French",
+      payment: "Crypto",
+      rating: 4.7,
+      Discount: 14,
+      img: "https://cdn.pixabay.com/photo/2016/03/27/21/34/restaurant-1284351_960_720.jpg",
+    },
+    {
+      name: "Red Hotel",
+      place: "Hyderabad",
+      price: 1600,
+      type: "Mexican",
+      payment: "Cheque",
+      rating: 3.5,
+      Discount: 9,
+      img: "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg",
+    },
+
+    {
+      name: "Ged Hotel",
+      place: "Hyderabad",
+      price: 1900,
+      type: "Arabian",
+      payment: "Paytm",
+      rating: 3.5,
+      Discount: 9,
+      img: "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg",
+    },
+    //
+    {
+      name: "Marriott",
+      place: "Hyderabad",
+      price: 2000,
+      type: "5 star",
+      payment: "Dineout Pay",
+      rating: 4.5,
+      Discount: 12,
+      img: "https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952_960_720.jpg",
+    },
+
+    {
+      name: "Ritz-Carlton Hote",
+      place: "Hyderabad",
+      price: 3000,
+      type: "Chinese",
+      payment: "Credit Card",
+      rating: 4.3,
+      Discount: 30,
+      img: "https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_960_720.jpg",
+    },
+    {
+      name: "Ocean Pearl",
+      place: "Hyderabad",
+      price: 4400,
+      type: "North Indian",
+      payment: "UPI",
+      rating: 4.1,
+      Discount: 50,
+      img: "https://cdn.pixabay.com/photo/2021/07/19/16/04/pizza-6478478_960_720.jpg",
+    },
+    {
+      name: "Hyatt",
+      place: "Hyderabad",
+      price: 900,
+      type: "Italian",
+      payment: "Paypal",
+      rating: 4.0,
+      Discount: 10,
+      img: "https://cdn.pixabay.com/photo/2017/08/03/21/48/drinks-2578446_960_720.jpg",
+    },
+
+    {
+      name: "Aman Resorts",
+      place: "Hyderabad",
+      price: 4000,
+      type: "Seafood",
+      payment: "Cash",
+      rating: 3.1,
+      Discount: 20,
+      img: "https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590_960_720.jpg",
+    },
+    {
+      name: "Sizzling Inn",
+      place: "Hyderabad",
+      price: 4200,
+      type: "Pure veg",
+      payment: "Debitcard",
+      rating: 2.1,
+      Discount: 13,
+      img: "https://cdn.pixabay.com/photo/2016/11/22/06/32/girl-1848478_960_720.jpg",
+    },
+    {
+      name: "Palace Hotel",
+      place: "Hyderabad",
+      price: 1400,
+      type: "French",
+      payment: "Crypto",
+      rating: 4.7,
+      Discount: 14,
+      img: "https://cdn.pixabay.com/photo/2016/03/27/21/34/restaurant-1284351_960_720.jpg",
+    },
+    {
+      name: "Red Hotel",
+      place: "Hyderabad",
+      price: 1600,
+      type: "Mexican",
+      payment: "Cheque",
+      rating: 3.5,
+      Discount: 9,
+      img: "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg",
+    },
+
+    {
+      name: "Ged Hotel",
+      place: "Hyderabad",
+      price: 1900,
+      type: "Arabian",
+      payment: "Cheque",
+      rating: 3.5,
+      Discount: 9,
+      img: "https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_960_720.jpg",
+    },
+  ];
+  displaycontent(hotels);
+  function displaycontent(data) {
+    document.getElementById("product-details").innerHTML = ""; //
+    console.log(data);
+    data.map(function (elem) {
+      var maindiv = document.createElement("div");
+      maindiv.setAttribute("id", "hotel-container");
+      var div1 = document.createElement("div");
+      var div2 = document.createElement("div");
+      div1.style.height = "170px";
+      div2.style.height = "141.78px";
+      maindiv.setAttribute("class", "highlightit");
+
+      div1.style.width = "100%";
+      div2.style.width = "98%";
+      var img = document.createElement("img");
+      img.setAttribute("src", elem.img);
+      img.style.height = "100%";
+      img.style.width = "100%";
+      img.style.borderTopRightRadius = "7px";
+      img.style.borderTopLeftRadius = "7px";
+
+      var p1 = document.createElement("p");
+      p1.innerHTML = elem.name;
+      p1.style.fontSize = "21px";
+      p1.style.fontWeight = "bold";
+      var p2 = document.createElement("p");
+      p2.innerHTML = elem.place;
+      var div3 = document.createElement("div");
+      var p3 = document.createElement("p");
+      p3.innerHTML = elem.price + " Rs for two People(approx)  ";
+      var p4 = document.createElement("p");
+      p4.innerHTML = "|" + "   " + elem.type;
+      var p5 = document.createElement("p");
+      p5.innerHTML = elem.payment;
+      div2.style.lineHeight = "30px";
+      // div2.style.backgroundColor = "white";
+      div2.style.paddingTop = "10px";
+      div2.style.paddingLeft = "10px";
+      p5.style.color = "rgb(248,171,179)";
+      var p6 = document.createElement("b");
+      p6.innerHTML = elem.rating;
+      p6.style.color = "green";
+      p6.style.cssFloat = "right";
+      p6.style.marginRight = "10px";
+      div3.append(p3, p4);
+      div3.style.display = "flex";
+      div1.append(img);
+      div2.append(p1, p6, p2, div3, p5);
+      maindiv.style.borderRadius = "7px";
+      maindiv.append(div1, div2);
+      maindiv.addEventListener("click", function () {
+        console.log(elem);
+        localStorage.setItem("mylocal", JSON.stringify(elem));
+        window.location.href = "bookatable.html";
+      });
+      document.getElementById("product-details").append(maindiv);
+    });
+  }
+
+  document
+    .getElementById("sortby")
+    .addEventListener("change", function (event) {
+      if (event.target.value == "Priceasc") {
+        ascending(event);
+      } else if (event.target.value == "Pricedsc") {
+        descending();
+      } else if (event.target.value == "pop") {
+        locationwise();
+      } else if (event.target.value == "Rat") {
+        console.log("yess");
+        sortbyrating();
+      }
+    });
+
+  function ascending() {
+    {
+      document.getElementById("product-details").innerHTML = "";
+      hotels.sort(function (a, b) {
+        return Number(a.price) - Number(b.price);
+      });
+    }
+    displaycontent(hotels);
+  }
+
+  function descending() {
+    {
+      document.getElementById("product-details").innerHTML = "";
+      hotels.sort(function (a, b) {
+        return Number(b.price) - Number(a.price);
+      });
+    }
+    displaycontent(hotels);
+  }
+  function sortbyrating() {
+    {
+      document.getElementById("product-details").innerHTML = "";
+      hotels.sort(function (a, b) {
+        return b.rating - a.rating;
+      });
+    }
+    displaycontent(hotels);
+  }
+  function locationwise() {
+    {
+      document.getElementById("product-details").innerHTML = "";
+      hotels.sort(function (a, b) {
+        return a.place.localeCompare(b.place);
+      });
+    }
+    displaycontent(hotels);
+  }
+  function Changepage() {
+    var sitname = "./" + document.getElementById("changeP").value + ".html";
+    window.open(`${sitname}`, "_self");
+  }
+</script>
