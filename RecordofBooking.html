@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dineout</title>
+    <link rel="icon" type="image/x-icon" href="https://www.dineout.co.in/static/img/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/584aebd994.js"
@@ -264,7 +265,7 @@
       <hr style="color: gray; margin-top: 60px" />
       <div id="lowerhead">
         <div><a href="afterLoginPage.html">Home</a></div>
-        <div><a href="">Book a Table</a></div>
+        <div><a href="bookingwindow.html">Book a Table</a></div>
         <div><a href="">Dineout Pay</a></div>
         <div><a href="">Super Saver</a></div>
       </div>
@@ -295,14 +296,18 @@
         <div class="gDetails">
           <h2>Booking Summary</h2>
           <div>
-            <h3>Table Status - Confirmed</h3>
+            <h3 id="tablestatus">Table Status - Confirmed</h3>
             <h3 id="stutusofbooking">
               Your reservation is confirmed! Happy Dining
             </h3>
           </div>
           <div>
-            <h3>Date & Time</h3>
-            <h3 id="Dateandtime">Guest Number</h3>
+            <h3>Date</h3>
+            <h3 id="Date">date</h3>
+          </div>
+          <div>
+            <h3>Time</h3>
+            <h3 id="time">time</h3>
           </div>
           <div>
             <h3>Guests</h3>
@@ -329,6 +334,27 @@
         document.getElementById("NameofGuest").innerText = userdata[i].name;
         document.getElementById("NoofGuest").innerText = userdata[i].mobileNo;
         document.getElementById("EmailofGuest").innerText = userdata[i].email;
+      }
+    }
+    var checkdate = JSON.parse(localStorage.getItem("datechecking"));
+    var cancelledd = localStorage.getItem("cancelledBooking") || "Confirmed";
+    if (cancelledd == "Cancelled") {
+      document.getElementById("stutusofbooking").innerText =
+        "You have cancelled this reservation. Until next time!";
+      document.getElementById("tablestatus").innerText = "Cancelled";
+    }
+    var hotelbook = JSON.parse(localStorage.getItem("hotelbookdata")) || [];
+    for (var i = 0; i < hotelbook.length; i++) {
+      if (checkdate == hotelbook[i].bookingdater) {
+        document.getElementById("Date").innerText = hotelbook[i].bookingdater;
+        document.getElementById("time").innerText = hotelbook[i].bookigtimer;
+        document.getElementById("CGuest").innerText = hotelbook[i].noOfGuest;
+        document.getElementById("IdBooking").innerText = hotelbook[i].UniqNo;
+        document.getElementById("NameOfRestorant").innerText =
+          hotelbook[i].nameH;
+        console.log(hotelbook[i].nameH);
+        document.getElementById("AdresssOfRestorant").innerText =
+          hotelbook[i].addressH;
       }
     }
   </script>

@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dineout</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.dineout.co.in/static/img/favicon.ico"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/584aebd994.js"
@@ -160,7 +165,7 @@
         border: none;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         display: flex;
-        margin-top: -80px;
+        margin-top: -160px;
         position: fixed;
         margin-left: 65%;
         flex-direction: column;
@@ -340,6 +345,7 @@
         <div>
           <div>
             <img
+              id="hotelImgh"
               src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/2/a/j/p20996-145631488756cd9a0796608.jpg?tr=tr:n-large"
               alt=""
             />
@@ -394,9 +400,13 @@
           <input type="email" name="" id="guestEmail" placeholder="Email Id" />
           <div id="totalGuest">
             <p>Guests</p>
-            <button onclick="decreaseGuests()" id="btn1">-</button>
+            <button onclick="decreaseGuests()" type="button" id="btn1">
+              -
+            </button>
             <p id="guestCount">0</p>
-            <button onclick="increaseGuests()" id="btn2">+</button>
+            <button onclick="increaseGuests()" type="button" id="btn2">
+              +
+            </button>
           </div>
           <input
             type="submit"
@@ -417,11 +427,6 @@
     <!-- calender part end   -->
   </body>
   <script>
-    document.querySelector("form").addEventListener("submit", bookTable);
-    function bookTable(event) {
-      event.preventDefault();
-    }
-
     $(function () {
       var dtToday = new Date();
 
@@ -481,15 +486,26 @@
       var bookingtime = document.getElementById("bookingTime").value;
       var foodmenue = document.getElementById("foodT").value;
       var noofguest = document.getElementById("guestCount").innerText;
+      var addreshotel = document.getElementById("AdressOfHotel").innerText;
+      var nameofhotel = document.getElementById("nameOfHotel").innerText;
+      var imgurl = document.getElementById("hotelImgh").src;
+      console.log(addreshotel);
+      var uniqNO = Date.now();
+      localStorage.setItem("datechecking", JSON.stringify(bookingdate));
       console.log(noofguest);
       var data = {
         bookingdater: bookingdate,
         bookigtimer: bookingtime,
         foodmenuer: foodmenue,
         noOfGuest: noofguest,
+        UniqNo: uniqNO,
+        nameH: nameofhotel,
+        addressH: addreshotel,
+        imgHotel: imgurl,
       };
       hotelbook.push(data);
       localStorage.setItem("hotelbookdata", JSON.stringify(hotelbook));
+      window.open("./RecordofBooking.html", "_self");
     }
   </script>
 </html>

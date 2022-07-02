@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+   <title>Dineout</title>
+    <link rel="icon" type="image/x-icon" href="https://www.dineout.co.in/static/img/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/584aebd994.js"
@@ -425,7 +426,7 @@
       <hr style="color: gray; margin-top: 60px" />
       <div id="lowerhead">
         <div><a href="afterLoginPage.html">Home</a></div>
-        <div><a href="">Book a Table</a></div>
+        <div><a href="bookingwindow.html">Book a Table</a></div>
         <div><a href="">Dineout Pay</a></div>
         <div><a href="">Super Saver</a></div>
       </div>
@@ -686,8 +687,10 @@
     function cancelBookingTab() {
       document.getElementById("CancelWindow").style.display = "none";
       document.getElementById("bookingStatus").style.background = "gray";
-      document.getElementById("bookingStatus").innerText = "Cancelled";
+      localStorage.setItem("cancelledBooking", "Cancelled");
+     document.getElementById("bookingStatus").innerText = "Cancelled";
     }
+
       var checkemail = JSON.parse(localStorage.getItem("emailnew"));
       var userdata = JSON.parse(localStorage.getItem("users")) || [];
       for(var i=0; i<userdata.length; i++){
@@ -697,12 +700,14 @@
            document.getElementById("profileEmail").innerText = userdata[i].email;
         }
       }
-      displaybookeddata();
+         var hotelbook = JSON.parse(localStorage.getItem("hotelbookdata")) || [];
+     if(hotelbook.length>0){
+       displaybookeddata();
  function displaybookeddata(){
     var bookeddata = `  
           <div>
             <div>
-            <h2 id="prevReser"> Reservations</h2>
+            <h2 id="prevReser"> </h2>
             <hr style="width: 80%; background-color: #ff645a; height: 3px" />
           </div>
           <div>
@@ -711,7 +716,7 @@
              <div id="CancelledDataL"> 
               <div>
               <img id="hotelImg"
-                src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/2/b/t/p27452-15020105505986dcb6d147f-80x80-ido3b403b586f3bd.jpg"
+                src=""
                 alt=""
               />
               <h4 id="bookingStatus">Conformed</h4>
@@ -753,6 +758,31 @@
           div.innerHTML = bookeddata;
           document.getElementById("bookingHistoryDiv").append(div);
  }
-
+  var checkdate = JSON.parse(localStorage.getItem("datechecking"));
+    console.log(checkdate);
+ 
+    for (var i = 0; i < hotelbook.length; i++) {
+      if (checkdate == hotelbook[i].bookingdater) {
+        document.getElementById("dateofBookingC").innerText = hotelbook[i].bookingdater;
+        document.getElementById("timeofBookingC").innerText = hotelbook[i].bookigtimer;
+        document.getElementById("noOfGuestsC").innerText = hotelbook[i].noOfGuest;
+        document.getElementById("bookingIDC").innerText = hotelbook[i].UniqNo;
+        document.getElementById("hotelName").innerText = hotelbook[i].nameH;
+         document.getElementById("resonforBooking").innerText = hotelbook[i].foodmenuer;
+        document.getElementById("hotelImg").src =hotelbook[i].imgHotel;
+        console.log(hotelbook[i].nameH);
+        document.getElementById("hotelplace").innerText =hotelbook[i].addressH;
+      }
+    }
+    var cancelledd = localStorage.getItem("cancelledBooking")||"Confirmed";
+    if(cancelledd == "Cancelled"){
+      document.getElementById("bookingStatus").style.background = "gray";
+       document.getElementById("cancelBookingM").innerText = "";
+       
+    }
+    document.getElementById("bookingStatus").innerText = cancelledd;
+    
+     }
+    
   </script>
 </html>
