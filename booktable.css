@@ -149,3 +149,13 @@ justify-content: space-between;
     background-color: white;
     border-radius: 5px;   
 }
+#product-details{
+    background-color: #f4f4f4;
+    
+    margin-top:10px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap:35px;
+}
