@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dineout</title>
+    <link rel="icon" type="image/x-icon" href="https://www.dineout.co.in/static/img/favicon.ico">
+    <link rel="stylesheet" href="./foot.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header id="header">
+      <div id="nav">
+        <div id="logo">
+          <a href=""
+            ><img   style="box-shadow: none;"
+              src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/25/website-logo.png"
+              alt=""
+          /></a>
+        </div>
+        <div id="city">
+          <div id="location">
+            <img id="loc" src="location_logo.png" alt="" />
+          </div>
+          <select
+            class="location"
+            name=""
+            aria-placeholder="Please type a location"
+          >
+            <option id="Delhi">Delhi</option>
+            <option value="Rajauri Garden">Mumbai</option>
+            <option value="Sector 29, Gurgaon">Pune</option>
+            <option value="DLF Cyber City, Gurgaon">Benglore</option>
+          </select>
+        </div>
+
+        <div id="con">
+          <ul>
+            <li>
+              <a class="navheading" href=""> Home</a>
+            </li>
+            <li><a class="navheading" href="./login/login.html">Book a table</a></li>
+            <li><a class="navheading" href="./login/login.html">Dineout Pay</a></li>
+            <li><a class="navheading" href="./login/login.html">Dineout Passport</a></li>
+            <li><a class="navheading" href="./login/login.html">Events</a></li>
+            <li><a class="navheading" href="./login/login.html">Super Saver</a></li>
+            <li><a class="navheading" href="./login/login.html">Blog</a></li>
+          </ul>
+        </div>
+        <div id="loginD">
+          <button id="login"><a href="./login/login.html" style="text-decoration: none;color: white;">Login</a></button>
+        </div>
+      </div>
+    </header>
+
+    <div id="bigImage">
+      <div id="imgCon">
+        <h1>
+          It's Now Safe To <span style="color: #ff645a ">Crave!</span>
+        </h1>
+      </span>
+        
+      </div>
+      <div id="serachbar">
+        <div ><img
+          class="searchLogo"
+          style="font-size: 20px"
+          src="serchlogo.png"
+          alt=""
+        /></div>
+        <input
+          type="text"
+          id="search"
+          placeholder="Search for Restaurants, Cuisines, Location..."
+        />
+        <button type="submit" id="searchBut">Search</button></div>
+    </div>
+    <!-- header end -->
+    <section class="sec" style="height: 240px;">
+      <div id="sec1data">
+        <div><h2>Best offers</h2></div>
+        <div id="OfferData"></div> 
+      </div>
+    </section>
+    <section class="sec "style="background-color: white">  
+      <div  >
+        <div class="titleBox"><h2>Restaurants Near You</h2></div>
+       <div class="sec2data" id="container" onmouseenter="viewArrow()"> <a id="restroData"> </a></div>
+      </div>
+    </section>
+    <div class="dirM">
+      <div class="dirButton">
+      <button class="directionL" type="button" onclick="slide('left')"></button>
+      <button class="directionR" type="button" onclick="slide('right')"></button>
+    </div>
+    </div>
+  
+    <section class="sec sec2" style="background-color: white">
+      
+      <div>
+        <div class="titleBox" id="dirfix"><h2>Featured Restaurants</h2></div>
+        <div class="sec2data " id="container2" onmouseenter="viewArrow()"><a id="restroData2"></a></div>
+    </section>
+     <div class="dirM" >
+      <div class="dirButton">
+      <button class="directionL" type="button" onclick="slide2('left')"></button>
+      <button class="directionR" type="button" onclick="slide2('right')"></button>
+    </div>
+     </div>
+    <section class=" sec sec2" id="buttonbackground" style="background-color: white;">
+     <div id="buttonarea"> 
+      <div id="buttongrid">
+      </div>
+    </div>
+    </section class="sec "style="background-color: white">
+    <div class="seeplansimg">
+      <a class="offerimg"> <img src="https://im1.dineout.co.in/images/uploads/misc/2020/Sep/9/artboard.png?tr=tr:n-large" alt=""></a>
+      <a id="footerRestorantdata">
+        
+      </a>
+    </div>
+    <section>
+      
+    </section>
+    <!-- footer section starts -->
+    <section class="footersection">
+        <section class="footer">
+      <div class="box">
+        <h4 style="cursor: pointer;">Available In</h4>
+      </div>
+      <div class="container">
+        <div class="boxs">
+          <li>Delhi</li>
+          <li>Pune</li>
+          <li>Jaipur</li>
+          <li>Vadodara</li>
+        </div>
+        <div class="boxs">
+          <li>Mumbai</li>
+          <li>Kolkata</li>
+          <li>Lucknow</li>
+          <li>Nagpur</li>
+        </div>
+        <div class="boxs">
+          <li>Bangalore</li>
+          <li>Ahmadabad</li>
+          <li>Indore</li>
+          <li>Kochi</li>
+        </div>
+        <div class="boxs">
+          <li>Chennai</li>
+          <li>Chandigarh</li>
+          <li>Udaipur</li>
+          <li>Surat</li>
+        </div>
+        <div class="boxs">
+          <li>Hyderabad</li>
+          <li>Goa</li>
+          <li>Agra</li>
+          <li>Ludhiana</li>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class="footerr">
+      <div class="containerr">
+        <div class="boxs">
+          <h4>Discover</h4>
+          <ul>
+            <li>Trending Restaurants</li>
+            <li>Super Savers</li>
+            <li>Dineout Pay</li>
+            <li>Dineout Passport</li>
+            <li>Contactless Dining</li>
+          </ul>
+        </div>
+        <div class="boxs">
+          <h4>About</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Blog</li>
+            <li>Careers</li>
+            <li>Dineout for Business</li>
+            <li>Add Restaurant</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy policy</li>
+          </ul>
+        </div>
+        <div class="boxs">
+          <h4>Top Cuisines</h4>
+          <ul>
+            <li>Chinese</li>
+            <li>Italian</li>
+            <li>North Indian</li>
+            <li>Kerala</li>
+            <li>Mexican</li>
+            <li>Multi-Cuisine</li>
+          </ul>
+        </div>
+        <div class="boxs">
+          <h4>Top Facilities</h4>
+          <ul>
+            <li>Fine Dining</li>
+            <li>5 Star</li>
+            <li>Sea food</li>
+          </ul>
+        </div>
+        <div class="boxs">
+          <h4>Top Locations</h4>
+          <ul>
+            <li>Velachery</li>
+            <li>Nungambakkam</li>
+            <li>Anna Nagar</li>
+            <li>Adyar</li>
+            <li>Besant Nagar</li>
+            <li>Mahabalipuram</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <div class="imageF">
+      <img
+        class="footerImg"
+        src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/25/website-logo.png"
+        alt="logo"
+      />
+      <p style="margin: 15px 0 15px 0;">Find the best Restaurants, Deals, Discounts & Offers</p>
+      <p>contact:+91-9212340202</p>
+      <div class="imgMdiv">
+        <img
+          class="footerImg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAxR8YfpcRZF5HCkgptNL4MY1ItgPy9P0g2A&usqp=CAU"
+          alt="logo"
+          height="30px"
+          width="30px"
+        />
+        <img
+          class="footerImg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvYUulM-OB_hNA2RD16qC42d0mC5bvcCoxtA&usqp=CAU"
+          alt="logo"
+          height="30px"
+          width="30px"
+        />
+        <img
+          class="footerImg"
+          src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+          alt="logo"
+          height="30px"
+          width="30px"
+        />
+        <img
+          class="footerImg"
+          src="data:image/png;base64,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"
+          alt="logo"
+          height="30px"
+          width="30px"
+        />
+      </div>
+      <p style="margin-bottom: 50px;">© 2017, dineout.co.in. All Rights Reserved.</p>
+    </div>
+    </section>
+  </body>
+  
+  <script
+    src="https://kit.fontawesome.com/584aebd994.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="index.js"
+  ></script>
+</html>

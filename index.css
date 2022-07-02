@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  font-family: "Metropolis", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+#header {
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#nav {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchLogo {
+  box-shadow: none;
+  width: 25px;
+  margin-left: 20px;
+}
+#location {
+  width: 0;
+  height: 0;
+  align-self: flex-start;
+  z-index: 1;
+}
+#loc {
+  width: 20px;
+  padding-top: 6px;
+  padding-left: 7px;
+}
+
+#city {
+  display: flex;
+  margin: 0 -22px 0 20px;
+  padding: 4px 10px;
+}
+#city select {
+  width: 200px;
+  height: 33px;
+  align-self: center;
+  padding-left: 25px;
+  border-radius: 5px;
+  border: 0.2px solid lightslategray;
+  color: gray;
+}
+#con {
+  display: flex;
+  flex-wrap: none;
+  justify-content: space-between;
+  align-items: center;
+}
+li {
+  text-align: -webkit-match-parent;
+  position: relative;
+}
+ul {
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  list-style-type: none;
+}
+.navheading {
+  padding: 15px 5px 20px 5px;
+  display: block;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  margin: 0 5px;
+  color: #333333;
+}
+.navheading:hover {
+  color: red;
+}
+*::before {
+  box-sizing: border-box;
+}
+.navheading:hover::before {
+  content: "";
+  position: absolute;
+  margin-top: -7px;
+  top: 1px;
+  left: 50%;
+  right: 0;
+  background: #ff645a;
+  height: 3px;
+  transform: translate(-50%, -50%);
+}
+#login {
+  height: 32px;
+  width: 108px;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #ff645a;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  display: block;
+  justify-content: center;
+  font-weight: 700;
+  padding: 3.5px 3.5px 5px 3.5px;
+  align-content: center;
+}
+#login:hover {
+  background-color: red;
+  cursor: pointer;
+}
+#loginD {
+  margin: 0 0 2px 20px;
+}
+#bigImage {
+  border: 0.1px solid white;
+  height: 380px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  background: url(https://im1.dineout.co.in/images/uploads/misc/2021/Mar/31/oldherobannerwebfinal_bau.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#imgCon {
+  text-align: center;
+}
+#imgCon h1 {
+  margin-bottom: 50px;
+}
+#search {
+  width: 80%;
+  height: 40px;
+  font-size: larger;
+  border: none;
+  outline: none;
+  margin: 0 30px 5px 20px;
+}
+
+#searchBut {
+  margin-right: 20px;
+  font-size: larger;
+  font-weight: bolder;
+  color: white;
+  background-color: #ff645a;
+  border: 0;
+  padding: 10px 40px;
+  border-radius: 6px;
+}
+#searchBut:hover {
+  background-color: red;
+  cursor: pointer;
+}
+#logo {
+  width: 100px;
+  height: 33px;
+}
+#logo > a > img {
+  display: block;
+  width: 100%;
+}
+#imgCon > h1 {
+  margin-top: 15px;
+  margin-bottom: 18px;
+  color: white;
+  font-size: 35px;
+}
+#serachbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  width: 1110px;
+  height: 60px;
+  border-radius: 5px;
+}
+#bigImage {
+  display: flex;
+  flex-direction: column;
+}
+body {
+  margin: 0;
+}
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#sec1data > div {
+  display: flex;
+  align-items: center;
+}
+.sec > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sec {
+  display: flex;
+  justify-content: center;
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 340px;
+  padding: 40px 0;
+}
+#sec1data {
+  margin: auto;
+  width: 1123px;
+  height: 174px;
+}
+#sec1data > div > div {
+  padding: 0 15px 10px 0;
+}
+a > img {
+  width: 128px;
+  box-shadow: 3px 4px 8px 0 rgb(0 0 0 / 25%);
+  border-radius: 5px;
+}
+
+#sec1data > div:first-child {
+  height: 40px;
+}
+#sec1data > div > h2 {
+  background-color: #f3f3f3;
+  color: #333;
+  margin: -15px 0 10px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24.08px;
+}
+
+#restroData,
+#restroData2 {
+  display: flex;
+
+  justify-content: space-between;
+}
+.singledata {
+  margin-right: 13px;
+  cursor: pointer;
+  width: 265px;
+  border-radius: 10px;
+}
+
+.singledata:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.hotelI {
+  width: 100%;
+  height: 138px;
+  transition: all 0.3s ease-out;
+}
+.hotelD {
+  width: 265px;
+  height: 138px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.hotelI:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 0.3s ease-in-out;
+}
+.sec2data > div:first-child {
+  margin-top: 100px;
+}
+h2 {
+  color: #333;
+  margin: -15px 0 10px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24.08px;
+}
+#textdata > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.rating {
+  background-color: #8cbb0f;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+  text-align: center;
+}
+.sec2data {
+  width: 1110px;
+  height: 420px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: -90px;
+}
+
+.sec2data::-webkit-slider-thumb {
+  cursor: pointer;
+}
+#textdata {
+  padding: 0px 2px 10px 0;
+  height: 100px;
+}
+.sec2 {
+  margin-top: 70px;
+}
+.discFooter {
+  display: flex;
+  align-items: center;
+  color: #54bd8a;
+  justify-content: center;
+  padding-top: 15px;
+  font-weight: bolder;
+}
+.percLogo {
+  width: 20px;
+  margin-right: -30px;
+}
+.paraP {
+  text-overflow: ellipsis;
+  font-size: 13px;
+  color: gray;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 10px 0 0;
+}
+.headH {
+  font-size: 17px;
+  margin: 0;
+  margin-top: 8px;
+}
+#buttongrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: -120px;
+}
+#container::-webkit-scrollbar {
+  display: none;
+}
+#container2::-webkit-scrollbar {
+  display: none;
+}
+.sec2data > div {
+  position: static;
+}
+.buttonS {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  height: 58px;
+  width: 267px;
+  text-decoration: none;
+  background-color: #f3f3f3ec;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 #8d8989;
+  cursor: pointer;
+}
+.buttonS > div > img {
+  width: 35px;
+  display: block;
+  margin: 0 10px 10px 30px;
+}
+.buttonS > div > p {
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.733);
+}
+.buttonS {
+  background: linear-gradient(
+    to right,
+    rgba(196, 194, 194, 0.342) 50%,
+    #f3f3f3a9 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.buttonS:hover {
+  background-position: left bottom;
+}
+.dirM {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  margin-top: -190px;
+}
+.dirButton {
+  display: flex;
+  width: 1110px;
+  justify-content: space-between;
+}
+.titleBox {
+  margin-bottom: 100px;
+  margin-top: -10px;
+}
+#dirfix {
+  margin-top: 0;
+}
+#buttonbackground {
+  margin-top: 40px;
+}
+.directionR,
+.directionL {
+  border-radius: 44px;
+  padding: 15px 20px;
+  background-color: rgb(209, 194, 194);
+  border: none;
+}
+.directionR {
+  right: 8px !important;
+  background: #f2f6fd
+    url(https://im1.dineout.co.in/images/uploads/misc/2020/Jan/9/carousel-right-arrow.png)
+    no-repeat 10px 50% !important;
+  background-size: 50% !important;
+}
+.directionL {
+  left: -3px !important;
+  background: #f2f6fd
+    url(https://im1.dineout.co.in/images/uploads/misc/2020/Jan/9/carousel-left-arrow.png)
+    no-repeat 10px 50% !important;
+  background-size: 50% !important;
+}
+
+.seeplansimg {
+  display: flex;
+  justify-content: center;
+  margin-top: -90px;
+}
+.offerimg > img {
+  width: 520px;
+  height: 470px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+#footerRestorantdata {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#loginD {
+  margin: 2px 0 0 55px;
+}
+#loginD select {
+  height: 30px;
+  width: 120px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+#loginD i {
+  margin: 0 2px 0 20px;
+}

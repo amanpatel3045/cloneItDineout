@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dineout</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.dineout.co.in/static/img/favicon.ico"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/584aebd994.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      /* header nav bar start */
+      body {
+        margin: 0;
+
+        background-color: rgba(175, 170, 170, 0.288);
+      }
+      #header2 {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        justify-content: center;
+        margin: 20px;
+        background-color: white;
+        z-index: 1;
+        margin-top: 0;
+        padding-top: 20px;
+      }
+      #navend {
+        position: fixed;
+        width: 100%;
+        padding-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.144) 0px 25px 20px -20px;
+        background-color: white;
+      }
+      #serachbar2 {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      #header2::after {
+        border-top: 1px solid #333;
+      }
+      #logo {
+        margin-left: 80px;
+        content: "";
+      }
+      .searchLogo2 {
+        width: 20px;
+        display: block;
+        margin: 0px -10px 0 10px;
+      }
+      #city2 select {
+        margin-top: 5px;
+        margin-left: 30px;
+        height: 30px;
+        align-self: center;
+        padding-left: 30px;
+        padding-right: 10px;
+        border: 0.1px solid gray;
+        border-radius: 5px;
+        color: #333;
+      }
+      #search2 {
+        margin-left: 20px;
+        height: 25px;
+        width: 450px;
+        padding-left: 40px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+      }
+      #searchBut2 {
+        height: 32px;
+        margin-left: -2px;
+        margin-right: -1px;
+        font-weight: bold;
+        font-size: 90%;
+        color: white;
+        background-color: #ff645a;
+        border: 0;
+        border-radius: 5px;
+        padding: 1px 20px;
+      }
+      #searchBut2:hover {
+        cursor: pointer;
+        background-color: red;
+      }
+      #log {
+        margin-left: 20px;
+        height: 32px;
+        font-size: 90%;
+        font-weight: bold;
+        color: white;
+        background-color: #ff645a;
+        border: 0;
+        border-radius: 5px;
+        padding: 6px 40px;
+      }
+      #log:hover {
+        cursor: pointer;
+      }
+      #loc1 {
+        position: absolute;
+        left: 265px;
+        top: 35px;
+      }
+      #searchlogo {
+        position: absolute;
+        left: 510px;
+        top: 35px;
+      }
+      #lowerhead {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+      }
+      #lowerhead a {
+        text-decoration: none;
+        margin: 20px;
+        color: #333;
+      }
+      #lowerhead a:hover {
+        color: red;
+      }
+      #mainHeader {
+        box-shadow: rgba(0, 0, 0, 0.144) 0px 25px 20px -20px;
+        padding-bottom: 10px;
+        background-color: white;
+      }
+      #location2 {
+        width: 0;
+        height: 0;
+        align-self: flex-start;
+        z-index: 1;
+      }
+      #city2 > select {
+        width: 150px;
+        margin-top: -10px;
+      }
+      #loc2 {
+        width: 20px;
+        padding-top: 6px;
+        padding-left: 35px;
+      }
+
+      #city2 {
+        display: flex;
+        margin: 0;
+        padding: 0px 10px;
+      }
+      /* header Nav bar end */
+      /* payment calender start */
+      #ReservationForm {
+        border: none;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        display: flex;
+        margin-top: -160px;
+        position: fixed;
+        margin-left: 65%;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: none;
+        width: 340px;
+        height: 460px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: white;
+      }
+      #ReservationForm label {
+        width: 80%;
+        font-size: 18px;
+        margin: 5px 0 5px 20px;
+
+        align-self: flex-start;
+      }
+      #ReservationForm input,
+      #ReservationForm select {
+        width: 80%;
+        margin: 5px 0 5px 0;
+        height: 32px;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        background-color: rgba(194, 187, 187, 0.192);
+        padding-left: 15px;
+        padding-right: 20px;
+      }
+      #ReservationForm select {
+        width: 88%;
+        height: 35px;
+      }
+      #reserHead {
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+      }
+      #reserHead > h5 {
+        font-size: 25px;
+        width: 100%;
+        margin: 6px 0 0 0;
+      }
+      #totalGuest {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(194, 187, 187, 0.192);
+        width: 80%;
+        padding: 0 20px 0 15px;
+        height: 35px;
+        border-radius: 5px;
+      }
+      #totalGuest button {
+        width: 20px;
+        height: 20px;
+        padding: 0 5px;
+        text-align: center;
+        border: 0.5px solid blue;
+        border-radius: 10px;
+        margin: 0 5px 0 5px;
+      }
+      #submitGuestData {
+        background-color: white;
+      }
+      /* payment calender End */
+      .sticky {
+        position: sticky;
+
+        width: 100%;
+      }
+      #loginD {
+        margin: 2px 0 0 55px;
+      }
+      #loginD select {
+        height: 30px;
+        width: 120px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+      }
+      #loginD i {
+        margin: 0 10px 0 -20px;
+      }
+      #booktable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+      }
+      #booktable > div {
+        width: 740px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: -250px;
+      }
+      #booktable > div > div:first-child > img {
+        width: 100%;
+        height: 445px;
+      }
+      #InfoHotel {
+        margin-left: 20px;
+      }
+      #InfoHotel > p {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <header id="mainHeader">
+      <div id="header2">
+        <div id="logo">
+          <a href=""
+            ><img
+              src="https://im1.dineout.co.in/images/uploads/misc/2019/Jul/25/website-logo.png"
+              alt="Dineout"
+              title="Dineout"
+              width="120"
+              height="40"
+          /></a>
+        </div>
+        <div id="city2">
+          <div id="location2">
+            <img id="loc2" src="location_logo.png" alt="" />
+          </div>
+          <select name="" aria-placeholder="Please type a location">
+            <option id="Delhi">Delhi</option>
+            <option value="Rajauri Garden">Mumbai</option>
+            <option value="Sector 29, Gurgaon">Pune</option>
+            <option value="DLF Cyber City, Gurgaon">Benglore</option>
+          </select>
+        </div>
+        <div id="serachbar2">
+          <div>
+            <img
+              class="searchLogo2"
+              style="font-size: 20px"
+              src="serchlogo.png"
+              alt=""
+            />
+          </div>
+          <input
+            type="text"
+            id="search2"
+            placeholder="Search for Restaurants, Cuisines, Location..."
+          />
+          <button type="submit" id="searchBut2">Search</button>
+        </div>
+        <div id="loginD">
+          <i class="fa-solid fa-user"></i>
+          <select name="" id="changeP" onchange="Changepage()">
+            <option value="afterLoginpage">My Account</option>
+            <option value="Myprofile">My Profile</option>
+            <option value="index">Logout</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <div id="navend">
+      <hr style="color: gray; margin-top: 60px" />
+      <div id="lowerhead">
+        <div><a href="afterLoginPage.html">Home</a></div>
+        <div><a href="bookingwindow.html">Book a Table</a></div>
+        <div><a href="">Dineout Pay</a></div>
+        <div><a href="">Super Saver</a></div>
+      </div>
+    </div>
+    <!-- navbar end -->
+    <section>
+      <div id="booktable">
+        <div>
+          <div>
+            <img
+              id="hotelImgh"
+              src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/2/a/j/p20996-145631488756cd9a0796608.jpg?tr=tr:n-large"
+              alt=""
+            />
+          </div>
+          <div>
+            <div id="InfoHotel">
+              <h2 id="nameOfHotel">Local</h2>
+              <p id="PriceOfHotel">
+                ₹ 2,000 for 2 | North Indian, Asian,Continental
+              </p>
+              <p id="AdressOfHotel">
+                Scindia House | Connaught Place | Delhi |
+              </p>
+              <p>Time: 11:00 AM to 12:00 AM</p>
+            </div>
+          </div>
+        </div>
+        <!-- calender start -->
+        <form id="ReservationForm">
+          <div id="reserHead"><h5>Make a Reservation</h5></div>
+          <label for="">Select Date</label>
+          <input
+            type="date"
+            name="Date"
+            id="bookingDate"
+            placeholder="Please enter Date"
+          />
+          <label for="">Select Time</label>
+
+          <input type="time" id="bookingTime" />
+          <select name="selecttime" id="foodT">
+            <option>BreakFast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+          </select>
+          <label for="">Enter Guest Details</label>
+
+          <input
+            type="text"
+            name=""
+            id="guestName"
+            placeholder="Guest Name"
+            required="required"
+          />
+          <input
+            type="number"
+            name=""
+            id="guestNumber"
+            placeholder="Mobile No."
+            required="required"
+          />
+          <input type="email" name="" id="guestEmail" placeholder="Email Id" />
+          <div id="totalGuest">
+            <p>Guests</p>
+            <button onclick="decreaseGuests()" type="button" id="btn1">
+              -
+            </button>
+            <p id="guestCount">0</p>
+            <button onclick="increaseGuests()" type="button" id="btn2">
+              +
+            </button>
+          </div>
+          <input
+            type="submit"
+            value="Continue"
+            id="submitGuestData"
+            style="
+              background-color: #ff645a;
+              color: white;
+              font-size: 20px;
+              font-weight: bold;
+              width: 95%;
+              margin: 0;
+            "
+          />
+        </form>
+      </div>
+    </section>
+    <!-- calender part end   -->
+  </body>
+  <script>
+    $(function () {
+      var dtToday = new Date();
+
+      var month = dtToday.getMonth() + 1;
+      var day = dtToday.getDate();
+      var year = dtToday.getFullYear();
+      if (month < 10) month = "0" + month.toString();
+      if (day < 10) day = "0" + day.toString();
+
+      var minDate = year + "-" + month + "-" + day;
+
+      $("#bookingDate").attr("min", minDate);
+    });
+    localStorage.setItem("GuestNo", 1);
+    var count = document.querySelector("#guestCount");
+    count.innerText = "1";
+    function increaseGuests() {
+      var ans = localStorage.getItem("GuestNo") || 1;
+      var count = document.querySelector("#guestCount");
+      ans++;
+      localStorage.setItem("GuestNo", ans);
+      count.innerText = ans;
+    }
+    function decreaseGuests() {
+      var ans = localStorage.getItem("GuestNo") || 1;
+      var count = document.querySelector("#guestCount");
+      ans--;
+      if (ans > 0) {
+        localStorage.setItem("GuestNo", ans);
+        count.innerText = ans;
+      }
+    }
+    window.onscroll = function () {
+      myFunction();
+    };
+    var header = document.getElementById("ReservationForm");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    function Changepage() {
+      var sitname = "./" + document.getElementById("changeP").value + ".html";
+      window.open(`${sitname}`, "_self");
+    }
+    // dkdkkdldjljjlakjjdlkjd
+    document.querySelector("form").addEventListener("submit", addDatatolocal);
+
+    var hotelbook = JSON.parse(localStorage.getItem("hotelbookdata")) || [];
+    function addDatatolocal(e) {
+      e.preventDefault();
+      var bookingdate = document.getElementById("bookingDate").value;
+      var bookingtime = document.getElementById("bookingTime").value;
+      var foodmenue = document.getElementById("foodT").value;
+      var noofguest = document.getElementById("guestCount").innerText;
+      var addreshotel = document.getElementById("AdressOfHotel").innerText;
+      var nameofhotel = document.getElementById("nameOfHotel").innerText;
+      var imgurl = document.getElementById("hotelImgh").src;
+      console.log(addreshotel);
+      var uniqNO = Date.now();
+      localStorage.setItem("datechecking", JSON.stringify(bookingdate));
+      console.log(noofguest);
+      var data = {
+        bookingdater: bookingdate,
+        bookigtimer: bookingtime,
+        foodmenuer: foodmenue,
+        noOfGuest: noofguest,
+        UniqNo: uniqNO,
+        nameH: nameofhotel,
+        addressH: addreshotel,
+        imgHotel: imgurl,
+      };
+      hotelbook.push(data);
+      localStorage.setItem("hotelbookdata", JSON.stringify(hotelbook));
+      window.open("./RecordofBooking.html", "_self");
+    }
+  </script>
+</html>
