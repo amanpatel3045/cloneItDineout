@@ -1,8 +1,8 @@
-## ** Problem statement**
+## **  Problem statement  **
 <br>
 Our Problem statement is creating a pixel-perfect clone of [Dinout](https://www.dineout.co.in/). Previously we did a clone of a few web pages but in this problem, we were supposed to make pages dynamic.
 
-## ** The Idea**
+## **  The Idea  **
 <br>
 We are pursuing a Full Stack Web Development course at Masai school, In Masai school, we have given a project that was to clone the Dineout hotel booking website. It was a pretty good project to work on. We are four members of the team. The task was to clone the pixel-perfect layout of Dineout website. Let's look at how we designed it 
 
@@ -71,3 +71,12 @@ We are pursuing a Full Stack Web Development course at Masai school, In Masai sc
 ## Tools
 > • VS Code
 > • Github
+
+## Blog link
+> ### •[Blog](https://dinoutclone.hashnode.dev/find-the-best-restaurants-deals-discounts-and-offers-dinout)
+
+## Project link
+> ### •[Dineout](https://effervescent-pony-2ac7cb.netlify.app/)
+
+## Github link
+> ### •[Dineout](https://github.com/Akash2377/cloneItDineout)
